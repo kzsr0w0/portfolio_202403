@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIHEI HARUNAのポートフォリオ</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px; /* 上下左右に20pxのパディングを追加 */
+        box-sizing: border-box;
+        text-align: center; /* 全体のテキストを中央揃えにする */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            background-color: #333; /* ヘッダーの背景色を濃い灰色に */
+            color: white; /* ヘッダーのテキスト色を白に */
+        }
+        .profile {
+            padding: 20px; /* 上下左右に20pxのパディングを追加 */
+        }
+        .profile h2 {
+            margin-top: 30px; /* タイトルの上のマージン */
+            margin-bottom: 30px; /* タイトルの下のマージン */
+        }
+        .profile p {
+            margin-top: 30px; /* 段落の上のマージン */
+            margin-bottom: 30px; /* 段落の下のマージン */
+            line-height: 1.0;
+            white-space: pre-wrap; /* 改行を保持する */
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #f5f5f5; /* ナビゲーションの背景色を薄い灰色に */
+            border-bottom: 1px solid #ccc; /* 下に薄い灰色の線を追加 */
+        }
+        .navigation a {
+            color: black; /* ナビゲーションのテキスト色を黒に */
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+        .projects {
+            margin-top: 60px;
+        }
+
+        .projects h2 {
+            /* タイトル「プロジェクト」を中央揃えにします */
+            text-align: center;
+            margin-bottom: 30px; /* タイトルとプロジェクト項目間のスペース */
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 列間の余白を均等に配分 */
+        }
+
+        .project {
+            width: calc(33% - 20px); /* 3列のための幅 (余白を引いて計算) */
+            margin-bottom: 20px; /* プロジェクト間の下余白 */
+        }
+        .project-image {
+            width: 100%; /* 画像の幅を親要素に合わせる */
+            height: auto; /* 高さを自動調整し、アスペクト比を保持 */
+            aspect-ratio: 1 / 1; /* アスペクト比を1:1に設定 */
+            object-fit: cover; /* 画像を枠内に収め、必要に応じて切り取る */
+            margin-bottom: 20px; /* 画像とテキストの間に余白を設定 */
+        }
+        .skills {
+            margin: 60px 0 0 0; /* 上のマージンを60pxに設定し、他は0に */
+        }
+        .skill-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column; /* 要素を縦に並べます */
+            align-items: center;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            text-align: center;
+            margin-bottom: 5px; /* ネームとバーの間の余白 */
+        }
+
+        .skill-bar {
+            width: 100%; /* コンテナ全体の幅を使用 */
+            height: 10px; /* バーの高さを細くします */
+            background-color: #ddd;
+            margin-bottom: 5px; /* バーと詳細の間の余白 */
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: #ffff99;
+        }
+
+        .skill-detail {
+            text-align: center;
+            font-size: 16px; /* コメントの文字サイズ、普通のテキストと同じサイズに */
+            color: #666; /* コメントの文字色を少し暗めに設定 */
+            width: 100%; /* 詳細がコンテナ全体の幅を使用するように設定 */
+        }
+
+
+
+        .content {
+            margin: 40px;
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 1em; /* ヘッダーと同じパディングに設定 */
+            background-color: #333; /* フッターの背景色を濃い灰色に */
+            color: white; /* フッターのテキスト色を白に */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">NIHEI HARUNA</div>
+        <div class="header-right">
+            <div class="contact-info">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+<section class="profile">
+    <h2>二瓶春菜のポートフォリオ</h2>
+    <p>
+    薬剤師として4年間、正社員として働きながら<br>
+    キカガクを受講して、Pythonを学習しました<br>
+    また、R、HTMLを独学で学習しました
+    </p>
+</section>
+
+<div class="navigation">
+    <a href="#projects">成果物</a>
+    <a href="#skills">技術</a>
+</div>
+
+<section id="projects" class="projects">
+    <h2>成果物</h2>
+    <div class="project-container"> <!-- このdivでプロジェクト項目を囲みます -->
+        <div class="project">
+            <img src="shift.jpeg" alt="成果物1の画像" class="project-image">
+            <h3>成果物1</h3>
+            <h3><a href="CTP-SOS.html">CTP-SOS</a></h3>
+            <p>
+                過去の来場者データから<br>
+                未来の来場者予測と<br>
+                予測人数からシフトを<br>
+                予測するアプリ
+            </p>
+        </div>
+        <div class="project">
+            <img src="drug.jpeg" alt="成果物2の画像" class="project-image">
+            <h3>成果物2</h3>
+            <h3><a href="fam.html">副作用の予後を予測</a></h3>
+            <p>ファモチジン服用患者について<br>
+                副作用が出た際に<br>
+                身長などから予後を推測するアプリ
+
+            </p>
+        </div>
+        <div class="project">
+            <img src="cat.jpg" alt="成果物3の画像" class="project-image">
+            <h3>成果物3</h3>
+            <h3><a href="CatOrNot.html">Cat or Not</a></h3>
+            <p>
+            提出された画像が猫か猫でないかを<br>
+            判別するアプリ
+            </p>
+        </div>
+        
+</section>
+
+
+
+<section id="skills" class="skills">
+    <h2>技術</h2>
+    <div class="skill-container">
+        <div class="skill">
+            <h2><span class="skill-name">R</span></h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+            <span class="skill-detail">ビッグデータについて効率的なデータ前処理、操作を行い統計手法を実装できます</span>
+        </div>
+
+        <div class="skill">
+            <h2><span class="skill-name">Python</span></h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+            <span class="skill-detail">複数のPythonフレームワークとライブラリを使用したプログラミングとアプリケーション開発ができます。</span>
+        </div>
+                
+        <div class="skill">
+            <h2><span class="skill-name">HTML</span></h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;"></div>
+            </div>
+            <span class="skill-detail">基本的なコンテンツの構造化ができ、シンプルなページレイアウトを実装できます</span>
+        </div>
+        
+        <div class="skill">
+            <h2><span class="skill-name">CSS</span></h2>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;"></div>
+            </div>
+            <span class="skill-detail">基本的なウェブページのスタイリングができます</span>
+        </div>
+            </div>
+</section>
+
+<footer>
+    <p></p>
+</footer>
+
+</body>
+</html>
